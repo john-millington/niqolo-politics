@@ -61,14 +61,14 @@ class ConstituencyDetails extends Component {
 
     const outcome_text = winner === previous ? 'hold' : 'gain';
     let trend_text = 'about the same here as';
-    if (details.deltas[winner] > 1.2) {
-      if (details.deltas[winner] > 2) {
+    if (details.true_deltas[winner] > 1.2) {
+      if (details.true_deltas[winner] > 2) {
         trend_text = 'a lot better here than';
       } else {
         trend_text = 'better here than';
       }
-    } else if (details.deltas[winner] < 0.8) {
-      if (details.deltas[winner] < 0.5) {
+    } else if (details.true_deltas[winner] < 0.8) {
+      if (details.true_deltas[winner] < 0.5) {
         trend_text = 'a lot worse here than';
       } else {
         trend_text = 'worse here than';
