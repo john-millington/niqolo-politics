@@ -1,0 +1,71 @@
+.niq-headline {
+  box-sizing: border-box;
+  display: flex;
+  height: 115px;
+  padding: 20px 0 20px 20px;
+}
+
+.niq-headline__item {
+  align-items: center;
+  border-radius: 2px;
+  color: #FFF;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.niq-headline__item-title {
+  color: #CCC;
+}
+
+.niq-headline__item-value {
+  font-size: 3rem;
+  margin-top: 5px;
+}
+
+.niq-results {
+  border: 1px solid #444;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  height: calc(100vh - 65px - 75px - 115px - 20px);
+  margin: 0 20px 20px;
+  overflow-y: scroll;
+  padding: 20px;
+}
+
+.niq-result__item {
+  align-items: center;
+  display: flex;
+  margin-bottom: 10px;
+  width: calc(100% / 3);
+}
+
+.niq-result__change {
+  align-items: center;
+  display: inline-flex;
+  min-width: 120px;
+}
+
+.niq-result__name {
+  padding-right: 20px;
+  font-size: 1.4rem;
+}
+
+.niq-tag {
+  display: inline-flex;
+  font-weight: bold;
+  justify-content: center;
+  padding: 5px;
+  width: 30px;
+}
+
+.niq-tag:first-child {
+  margin-right: 5px;
+}
+
+.niq-tag:last-child {
+  margin-left: 5px;
+}

@@ -20,3 +20,100 @@
 .App-link {
   color: #09d3ac;
 }
+
+.con {
+  color: #0087DC;
+}
+
+.lab {
+  color: #DC241f;
+}
+
+.lib {
+  color: #FAA61A;
+}
+
+.grn {
+  color: #528D6B
+}
+
+.bxp {
+  color: 	#12B6CF;
+}
+
+.plc {
+  color: #008142;
+}
+
+.snp {
+  color: #FDF38E;
+}
+
+.dup {
+  color: #D46A4C;
+}
+
+.all {
+  color: #F6CB2F;
+}
+
+.sf {
+  color: #326760;
+}
+
+.uup {
+  color: #48A5EE;
+}
+
+.sdlp {
+  color: #3A9E84;
+}
+
+.con-contrast {
+  background-color: #0087DC;
+}
+
+.lab-contrast {
+  background-color: #DC241f;
+}
+
+.lib-contrast {
+  background-color: #FAA61A;
+}
+
+.grn-contrast {
+  background-color: #528D6B
+}
+
+.bxp-contrast {
+  background-color: 	#12B6CF;
+}
+
+.plc-contrast {
+  background-color: #008142;
+}
+
+.snp-contrast {
+  background-color: #FDF38E;
+}
+
+.dup-contrast {
+  background-color: #D46A4C;
+}
+
+.all-contrast {
+  background-color: #F6CB2F;
+}
+
+.sf-contrast {
+  background-color: #326760;
+  color: #FFF;
+}
+
+.uup-contrast {
+  background-color: #48A5EE;
+}
+
+.sdlp-contrast {
+  background-color: #3A9E84;
+}
