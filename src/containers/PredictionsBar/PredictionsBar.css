@@ -40,8 +40,9 @@
 }
 
 .niq-prediction-button button {
-  background-color: #666;
-  border: 0;
+  background-color: #2185d0;
   color: #F5F5F5;
-  padding: 10px;
+  border: 0;
+  font-size: 1.4rem;
+  padding: 10px 20px;
 }

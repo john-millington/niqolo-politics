@@ -1,7 +1,7 @@
 .niq-headline {
   box-sizing: border-box;
   display: flex;
-  height: 115px;
+  height: 132px;
   padding: 20px 0 20px 20px;
 }
 
@@ -9,6 +9,7 @@
   align-items: center;
   border-radius: 2px;
   color: #FFF;
+  cursor: pointer;
   display: flex;
   flex: 1;
   flex-direction: column;
@@ -16,8 +17,20 @@
   padding: 10px;
 }
 
+.niq-headline__item:hover {
+  background: #444;
+  border-radius: 2px;
+}
+
+.niq-headline__item--selected,
+.niq-headline__item--selected:hover {
+  background: #222;
+}
+
+
 .niq-headline__item-title {
   color: #CCC;
+  font-weight: bold;
 }
 
 .niq-headline__item-value {
@@ -25,22 +38,33 @@
   margin-top: 5px;
 }
 
+.niq-headline__item-change {
+  font-size: 1.4rem;
+}
+
 .niq-results {
   border: 1px solid #444;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
-  height: calc(100vh - 65px - 75px - 115px - 20px);
+  height: calc(100vh - 65px - 75px - 132px - 20px);
   margin: 0 20px 20px;
   overflow-y: scroll;
-  padding: 20px;
 }
 
 .niq-result__item {
   align-items: center;
+  border-radius: 2px;
+  box-sizing: border-box;
+  cursor: pointer;
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  padding: 5px;
   width: calc(100% / 3);
+}
+
+.niq-result__item:hover {
+  background: #444;
 }
 
 .niq-result__change {
@@ -57,9 +81,13 @@
 .niq-tag {
   display: inline-flex;
   font-weight: bold;
-  justify-content: center;
   padding: 5px;
-  width: 30px;
+  width: auto;
+}
+
+.niq-tag-hold {
+  width: auto;
+  margin: 0 !important;
 }
 
 .niq-tag:first-child {

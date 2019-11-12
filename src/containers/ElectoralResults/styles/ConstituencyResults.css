@@ -1,0 +1,39 @@
+.niq-constituency-results__title-container {
+  background-color: #222;
+  display: flex;
+  font-size: 2rem;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+}
+
+.niq-constituency-results__title-back {
+  border-right: 1px solid #666;
+  color:#2185d0;
+  cursor: pointer;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+.niq-constituency-results {
+  flex: 1;
+}
+
+.niq-constituency-results__section {
+  margin-bottom: 60px;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.niq-constituency-results__section-title {
+  font-size: 2rem;
+  margin-left: 10px;
+  padding-bottom: 20px;
+}
+
+.niq-constituency-results__section-items {
+  align-content: baseline;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}

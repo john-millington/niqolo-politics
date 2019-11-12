@@ -1,0 +1,52 @@
+.niq-regional-results {
+  align-content: baseline;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.niq-region {
+  align-items: center;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  font-size: 2rem;
+  padding: 20px;
+  width: 50%;
+}
+
+.niq-region:hover {
+  background: #222;
+  border-radius: 2px;
+}
+
+.niq-region__title {
+  font-weight: bold;
+  padding-left: 20px;
+  width: 200px;
+}
+
+.niq-regional__breakdown {
+  display: flex;
+  flex: 1;
+}
+
+.niq-regional__item {
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 100px;
+}
+
+.niq-regional__item-name {
+  font-size: 1.4rem;
+}
+
+.niq-regional__item-value {
+  font-size: 2.4rem;
+  font-weight: bold;
+  margin-top: 5px;
+}

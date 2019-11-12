@@ -1,12 +1,25 @@
 import React, { Component } from 'react';
 import { isEqual } from 'lodash';
 
-import './ElectoralResults.css';
+import HeadlineResult from './HeadlineResult';
+import RegionalResults from './RegionalResults';
+
+import './styles/ElectoralResults.css';
+import ConstituencyResults from './ConstituencyResults';
 
 class ElectoralResults extends Component {
   state = {
+    party: null,
+    region: null,
     results: null
   };
+
+  constructor(props) {
+    super(props);
+
+    this.onSelectParty = this.onSelectParty.bind(this);
+    this.onSelectRegion = this.onSelectRegion.bind(this);
+  }
 
   componentDidMount() {
     fetch('/api/elections', {
@@ -43,6 +56,18 @@ class ElectoralResults extends Component {
     }
   }
 
+  onSelectParty(party) {
+    this.setState({
+      party: party
+    });
+  }
+
+  onSelectRegion(region = null) {
+    this.setState({
+      region
+    });
+  }
+
   render() {
     if (!this.state.results) {
       return null;
@@ -58,37 +83,31 @@ class ElectoralResults extends Component {
     return (
       <div className="niq-electoral-content">
         <div className="niq-headline">
-          {headline.map(({ party, count }) => {
-            return (
-              <div key={`${party}__result`} className={`niq-headline__item ${party.toLowerCase()}`}>
-                <span className="niq-headline__item-title">
-                  {party}
-                </span>
-                <span className="niq-headline__item-value">
-                  {count}
-                </span>
-              </div>
-            );
-          })}
+          {headline.map(({ party }) => (
+            <HeadlineResult
+              onSelect={this.onSelectParty}
+              party={party}
+              results={this.state.results}
+              selected={party === this.state.party}
+            />
+          ))}
         </div>
         <div className="niq-results">
-          {Object.keys(this.state.results.constituencies).map(name => {
-            const result = this.state.results.constituencies[name];
-            if (result.winner === result.previous) {
-              return null;
-            }
-
-            return (
-              <div className="niq-result__item">
-                <span className="niq-result__change">
-                  <span className={`niq-tag ${result.previous.toLowerCase()}`}>{result.previous}</span>
-                  ->
-                  <span className={`niq-tag ${result.winner.toLowerCase()}`}>{result.winner}</span>
-                </span>
-                <span className="niq-result__name">{name}</span>
-              </div>
-            );
-          })}
+          {!this.state.region && (
+            <RegionalResults
+              party={this.state.party}
+              results={this.state.results}
+              onSelect={this.onSelectRegion}
+            />
+          )}
+          {this.state.region && (
+            <ConstituencyResults
+              party={this.state.party}
+              results={this.state.results}
+              region={this.state.region}
+              onReset={this.onSelectRegion}
+            />
+          )}
         </div>
       </div>
     )

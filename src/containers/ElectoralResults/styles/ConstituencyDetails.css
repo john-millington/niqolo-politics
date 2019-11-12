@@ -1,0 +1,101 @@
+.niq-constituency {
+  background: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 65px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.niq-constituency__close {
+  color: #2185d0;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.niq-constituency__title {
+  border-bottom: 1px solid #666;
+  color: #CCC;
+  font-size: 2rem;
+  padding: 20px 0;
+  position: sticky;
+}
+
+.niq-constituency__content {
+  background: #222;
+  height: calc(100vh - 209px);
+  overflow-y: auto;
+}
+
+.niq-constituency__wrapper {
+  padding: 40px 80px;
+}
+
+.niq-constituency__section {
+  padding: 20px;
+}
+
+.niq-constituency__section-title {
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+}
+
+.niq-constituency__section-content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.niq-chart {
+  font-size: 1.4rem;
+  min-width: calc(100% / 5);
+}
+
+.niq-chart-header {
+  border-bottom: 1px solid #444;
+  display: flex;
+}
+
+.niq-chart-row {
+  border-bottom: 1px solid #333;
+  display: flex;
+}
+
+.niq-chart-header-title,
+.niq-chart-column {
+  padding: 10px;
+}
+
+.niq-chart-header-title:nth-child(1),
+.niq-chart-column:nth-child(1) {
+  border-right: 1px solid #444;
+  width: 100px;
+}
+
+.niq-constituency__history {
+  background-color: #333;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  width: calc((100% / 5) - 20px);
+}
+
+.niq-constituency__history-title {
+  color: #CCC;
+  font-size: 1.4rem;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.niq-constituency-details {
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.niq-constituency-details-outcome {
+  font-weight: bold;
+  margin-right: 10px;
+  text-transform: uppercase;
+}
