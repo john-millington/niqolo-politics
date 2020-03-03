@@ -32,7 +32,7 @@ class HeadlineResult extends Component {
     const count = headline[party];
     const change = changes[party];
 
-    const containerCLs = classnames('niq-headline__item', party.toLowerCase(), {
+    const containerCLs = classnames('niq-headline__item', party.toLowerCase() + '-contrast', {
       ['niq-headline__item--selected']: selected
     });
 

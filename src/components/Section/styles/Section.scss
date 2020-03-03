@@ -1,0 +1,21 @@
+.niq-section {
+  padding: 20px 40px;
+  margin-bottom: 20px;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__title {
+    background: #F5F5F5;
+    border-bottom: 1px solid #DDD;
+    color: #666;
+    font-family: "Myriad Pro Regular";
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding: 20px 0 20px;
+    position: sticky;
+    top: 0; 
+  }
+}

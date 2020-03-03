@@ -1,0 +1,38 @@
+.niq-table {
+  background: #EEE;
+  font-size: 1.4rem;
+  padding: 20px;
+  width: 100%;
+
+  &__header {
+    border-bottom: 1px solid #CCC;
+    color: #666;
+    display: flex;
+  }
+
+  &__row {
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+    display: flex;
+
+    &:hover {
+      background-color: #F5F5F5;
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &__header-title,
+  &__column {
+    box-sizing: border-box;
+    border-right: 1px solid #DDD;
+    flex: 1;
+    padding: 10px;
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+}

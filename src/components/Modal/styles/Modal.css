@@ -1,0 +1,35 @@
+.niq-modal {
+  background: rgba(0, 0, 0, 0.7);
+  color: #F5F5F5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2000; }
+  .niq-modal__close {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 2.4rem;
+    position: absolute;
+    top: 14px;
+    right: 20px; }
+    .niq-modal__close:hover {
+      opacity: 0.8; }
+  .niq-modal__content {
+    background: #F5F5F5;
+    box-shadow: 0px 0px 10px rgba(80, 80, 80, 0.5);
+    color: #222;
+    height: calc(100vh - 56px);
+    overflow-y: auto;
+    position: relative; }
+  .niq-modal__title {
+    /* background: rgba(245, 245, 245, 0.7); */
+    border-radius: 3px 3px 0 0;
+    font-family: "Myriad Pro SemiBold";
+    font-size: 1.8rem;
+    padding: 20px 20px 16px;
+    position: sticky; }
+  .niq-modal__wrapper {
+    padding: 0 120px; }

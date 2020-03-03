@@ -1,0 +1,31 @@
+@import "./../../../core/styles/variables/index";
+
+.niq-map {
+  &__container {
+    padding: 50px 0 50px 50px;
+  }
+
+  &__overlay {
+    background: rgba(#F5F5F5, 0.9);
+    border: 1px solid #DDD;
+    margin-left: 20px;
+    padding: 15px;
+    position: absolute;
+    width: 300px;
+  }
+
+  &__title {
+    color: #666;
+    font-family: $HEADING_SEMIBOLD;
+    font-size: 1.6rem;
+    padding: 0 0 15px;
+  }
+
+  &__constituency {
+    // transition: opacity 0.1s ease-out;
+
+    &--faded {
+      opacity: 0.6;
+    }
+  }
+}

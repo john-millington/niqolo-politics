@@ -1,54 +1,64 @@
 .niq-headline {
+  background: #333;
+  border-bottom: 1px solid #FFF;
   box-sizing: border-box;
   display: flex;
-  height: 132px;
-  padding: 20px 0 20px 20px;
+  height: 70px;
+  width: 100%;
 }
 
 .niq-headline__item {
   align-items: center;
-  border-radius: 2px;
-  color: #FFF;
   cursor: pointer;
   display: flex;
   flex: 1;
-  flex-direction: column;
-  margin-right: 20px;
+  justify-content: center;
   padding: 10px;
 }
 
 .niq-headline__item:hover {
   background: #444;
+  color: #F5F5F5;
   border-radius: 2px;
 }
 
 .niq-headline__item--selected,
 .niq-headline__item--selected:hover {
-  background: #222;
+  background: #333;
 }
 
 
 .niq-headline__item-title {
-  color: #CCC;
-  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 10px;
 }
 
 .niq-headline__item-value {
   font-size: 3rem;
-  margin-top: 5px;
+  font-weight: bold;
+  margin-right: 10px;
 }
 
 .niq-headline__item-change {
-  font-size: 1.4rem;
+  font-size: 2rem;
 }
 
 .niq-results {
-  border: 1px solid #444;
+  background: #F5F5F5;
   box-sizing: border-box;
+  color: #333;
   display: flex;
   flex-wrap: wrap;
-  height: calc(100vh - 65px - 75px - 132px - 20px);
-  margin: 0 20px 20px;
+  height: calc(100vh - 50px - 70px);
+  margin: 0;
+}
+
+.niq-results__container {
+  border-left: 1px solid #DDD;
+  display: flex;
+  flex: 1;
+  height: 100%;
+  margin-left: 40px;
   overflow-y: scroll;
 }
 
@@ -64,7 +74,7 @@
 }
 
 .niq-result__item:hover {
-  background: #444;
+  background: #FFF;
 }
 
 .niq-result__change {

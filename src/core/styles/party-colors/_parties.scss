@@ -1,0 +1,56 @@
+@import "./../variables/index";
+
+$PARTIES: (
+  "con": ("primary": $con, "contrast": $con-contrast),
+  "lab": ("primary": $lab, "contrast": $lab-contrast),
+  "lib": ("primary": $lib, "contrast": $lib-contrast),
+  "bxp": ("primary": $bxp, "contrast": $bxp-contrast),
+  "grn": ("primary": $grn, "contrast": $grn-contrast),
+  "plc": ("primary": $plc, "contrast": $plc-contrast),
+  "snp": ("primary": $snp, "contrast": $snp-contrast),
+  "dup": ("primary": $dup, "contrast": $dup-contrast),
+  "all": ("primary": $all, "contrast": $all-contrast),
+  "sf": ("primary": $sf, "contrast": $sf-contrast),
+  "uup": ("primary": $uup, "contrast": $uup-contrast),
+  "sdlp": ("primary": $sdlp, "contrast": $sdlp-contrast),
+);
+
+@mixin party-standard($party, $color) {
+  .#{$party} {
+    color: $color;
+  }
+}
+
+@mixin party-svg($party, $color) {
+  .#{$party}-svg {
+    cursor: pointer;
+    fill: lighten($color, 5%);
+    stroke: darken($color, 15%);
+    stroke-width: 1;
+
+    &:hover {
+      fill: lighten($color, 20%);
+    }
+  }
+}
+
+@mixin party-contrast($party, $color, $contrast: #F5F5F5) {
+  .#{$party}-contrast {
+    background: $color;
+    color: $contrast;
+  }
+} 
+
+@mixin party-gradient($party, $color, $contrast: #F5F5F5) {
+  .#{$party}-gradient {
+    background: linear-gradient(rgba($color, 0.9), rgba($color, 0.2)) !important;
+    color: $contrast !important;
+  }
+}
+
+@each $party, $colors in $PARTIES {
+  @include party-standard($party, map-get($colors, "primary"));
+  @include party-svg($party, map-get($colors, "primary"));
+  @include party-contrast($party, map-get($colors, "primary"), map-get($colors, "contrast"));
+  @include party-gradient($party, map-get($colors, "primary"), map-get($colors, "contrast"));
+}

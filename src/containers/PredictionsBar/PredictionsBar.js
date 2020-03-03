@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import './PredictionsBar.css';
+import classnames from 'classnames';
+
+import './styles/PredictionsBar.css';
 
 const PARTIES = [
-  { code: 'CON', default: 0.39 },
-  { code: 'LAB', default: 0.26 },
-  { code: 'LIB', default: 0.17 },
-  { code: 'BXP', default: 0.10 },
-  { code: 'GRN', default: 0.04 },
-  { code: 'SNP', default: 0.04 },
-  { code: 'PLC', default: 0.008 },
+  { code: 'CON', default: 0.4234 },
+  { code: 'LAB', default: 0.3999 },
+  { code: 'LIB', default: 0.0737 },
+  { code: 'BXP', default: 0.0184 },
+  { code: 'GRN', default: 0.0163 },
+  { code: 'SNP', default: 0.0304 },
+  { code: 'PLC', default: 0.0051 },
   // { code: 'UUP', default: 0.00225 },
   // { code: 'SDLP', default: 0.002 },
   // { code: 'DUP', default: 0.0075 },
@@ -57,21 +59,32 @@ class PredictionsBar extends Component {
   }
 
   render() {
+    const {
+      classPrefix = 'niq-predictions',
+      visible
+    } = this.props;
+    
+    const containerCls = classnames(classPrefix, {
+      [`${classPrefix}--visible`]: visible
+    });
+
     return (
-      <div className="niq-predictions-bar">
+      <div className={containerCls}>
         {PARTIES.map(party => (
-          <div className={`niq-prediction-input ${party.code.toLowerCase()}`}>
-            <span className="niq-prediction-label">{party.code}</span>
-            <input
-              onChange={this.onChange}
-              name={party.code}
-              type="text"
-              placeholder={(party.default * 100).toFixed(2)}
-              value={this.state.fields[party.code]}
-            />
+          <div className={`niq-predictions__input`}>
+            <span className={`niq-predictions__input-label ${party.code.toLowerCase()}-contrast`}>{party.code}</span>
+            <div className="niq-predictions__input-wrapper">
+              <input
+                onChange={this.onChange}
+                name={party.code}
+                type="text"
+                placeholder={(party.default * 100).toFixed(2)}
+                value={this.state.fields[party.code]}
+              /> %
+            </div>
           </div>
         ))}
-        <div className="niq-prediction-button">
+        <div className="niq-predictions__button">
           <button onClick={this.onClickPredict}>Predict</button>
         </div>
       </div>

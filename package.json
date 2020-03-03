@@ -4,12 +4,20 @@
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
+    "d3": "^5.14.2",
+    "d3-hexjson": "^1.1.0",
     "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "node-sass-chokidar": "^1.4.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.88.1"
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

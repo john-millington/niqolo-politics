@@ -1,0 +1,19 @@
+.niq-map__container {
+  padding: 50px 0 50px 50px; }
+
+.niq-map__overlay {
+  background: rgba(245, 245, 245, 0.9);
+  border: 1px solid #DDD;
+  margin-left: 20px;
+  padding: 15px;
+  position: absolute;
+  width: 300px; }
+
+.niq-map__title {
+  color: #666;
+  font-family: "Myriad Pro SemiBold";
+  font-size: 1.6rem;
+  padding: 0 0 15px; }
+
+.niq-map__constituency--faded {
+  opacity: 0.6; }

@@ -1,0 +1,24 @@
+.niq-table {
+  background: #EEE;
+  font-size: 1.4rem;
+  padding: 20px;
+  width: 100%; }
+  .niq-table__header {
+    border-bottom: 1px solid #CCC;
+    color: #666;
+    display: flex; }
+  .niq-table__row {
+    border-bottom: 1px solid #DDD;
+    cursor: pointer;
+    display: flex; }
+    .niq-table__row:hover {
+      background-color: #F5F5F5; }
+    .niq-table__row:last-child {
+      border-bottom: 0; }
+  .niq-table__header-title, .niq-table__column {
+    box-sizing: border-box;
+    border-right: 1px solid #DDD;
+    flex: 1;
+    padding: 10px; }
+    .niq-table__header-title:last-child, .niq-table__column:last-child {
+      border-right: 0; }

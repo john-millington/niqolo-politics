@@ -69,7 +69,7 @@ class ConstituencyResults extends Component {
         <div className="niq-constituency-results__section">
           <div className="niq-constituency-results__section-title">Changes</div>
           <div className="niq-constituency-results__section-items">
-            {Object.keys(constituencies).map(name => {
+            {Object.keys(constituencies).sort().map(name => {
               const result = constituencies[name];
               if (result.winner === result.previous) {
                 return null;
@@ -95,7 +95,7 @@ class ConstituencyResults extends Component {
         <div className="niq-constituency-results__section">
           <div className="niq-constituency-results__section-title">Holds</div>
           <div className="niq-constituency-results__section-items">
-            {Object.keys(constituencies).map(name => {
+            {Object.keys(constituencies).sort().map(name => {
               const result = constituencies[name];
               if (result.winner !== result.previous) {
                 return null;

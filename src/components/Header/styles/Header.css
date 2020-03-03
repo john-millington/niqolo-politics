@@ -1,0 +1,56 @@
+.niq-header__container {
+  background: #F5F5F5;
+  border-bottom: 1px solid #DDD;
+  box-sizing: border-box;
+  color: #333;
+  display: flex;
+  font-size: 2rem;
+  height: 50px;
+  justify-content: center;
+  position: relative;
+  z-index: 1000; }
+
+.niq-header__action {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #444;
+  cursor: pointer;
+  display: flex;
+  margin-right: 20px;
+  min-width: 60px;
+  padding: 5px 10px;
+  transition: color 0.3s ease-in-out; }
+  .niq-header__action-icon {
+    font-size: 2.4rem !important;
+    margin-top: -5px; }
+  .niq-header__action-label {
+    font-size: 1.4rem;
+    margin-left: 10px; }
+  .niq-header__action:hover {
+    color: #2185d0; }
+
+.niq-header__left {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  padding: 0 5px 1px; }
+
+.niq-header__right {
+  flex: 1; }
+
+.niq-header__title {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  font-family: "Myriad Pro Regular", Helvetica;
+  justify-content: center;
+  padding: 15px; }
+  .niq-header__title-primary {
+    letter-spacing: 0.4rem;
+    text-transform: uppercase; }
+  .niq-header__title-secondary {
+    border-left: 1px solid #CCC;
+    color: #666;
+    margin-left: 10px;
+    padding-left: 10px; }
